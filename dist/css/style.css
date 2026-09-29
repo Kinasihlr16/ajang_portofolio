@@ -1,3 +1,53 @@
+/* perbaikan */
+.hero-container{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+
+    .hero{
+        min-height: auto;
+    }
+
+    .hero-container{
+        flex-direction: column;
+        gap: 40px;
+        padding: 100px 20px 60px;
+    }
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
+    .hero-content h2{
+        font-size: 20px;
+    }
+
+    .hero-content p{
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .hero-buttons{
+        flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        padding: 12px 24px;
+    }
+
+    .image-wrapper{
+        width: 100%;
+        max-width: 320px;
+        height: 400px;
+    }
+}
+
+body {
+    display: block;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +63,8 @@ a{
 
 @media(max-width:768px) {
     .container{
-        width: 90%;
+        width:min(90%,1200px);
+        margin-inline:auto;
     }
     .hero h1{
         font-size: 2rem;
@@ -118,6 +169,8 @@ a{
     position:relative;
 
     overflow:hidden;
+    justify-content: center;
+    padding: 100px 0 50px;
 }
 
 /* blur background */
@@ -172,7 +225,7 @@ opacity:.5;
 
 .hero-container{
 
-max-width:1200px;
+width:100%;
 
 margin:auto;
 
@@ -196,7 +249,9 @@ z-index:2;
 
 .hero-content{
 
-flex:1;
+    width:100%;
+    max-width:1100px;
+    padding:0 20px;
 
 }
 
@@ -467,10 +522,10 @@ border-radius:20px;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1100px;
-  width: 100%;
+  width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
 }
 
 /* Tata Letak Kartu (Grid Responsive) */
@@ -482,7 +537,7 @@ border-radius:20px;
 
 /* Desain Kartu Utama */
 .info-card {
-  background-color: #ffffffc4;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 10px 12px;
   display: flex;
@@ -1432,3 +1487,40 @@ margin-top:15px;
 
 }
 /* END OF EXPERIENCE SECTION */
+
+
+/* temporary code for deleting white space  */
+@media (max-width: 768px){
+    .cards-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px){
+    .cards-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* temporary code for fixing layout at Education  */
+@media (max-width: 768px){
+
+    .timeline{
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .edu-card,
+    .edu-card.left,
+    .edu-card.right{
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /* garis horizontal diubah jadi vertikal kecil */
+    .timeline-line{
+        width: 0;
+        height: 12px;
+    }
+}
